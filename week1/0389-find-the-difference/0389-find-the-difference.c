@@ -1,5 +1,5 @@
 char findTheDifference(char* s, char* t) {
-    
+
     if (s == NULL || t == NULL)
     {
         return -1;
