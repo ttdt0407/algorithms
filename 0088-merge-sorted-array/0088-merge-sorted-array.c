@@ -1,34 +1,24 @@
-
-void swap(int* a, int* b)
-{
-    int temp = *a;
-    *a = *b;
-    *b = temp;
-}
-
 void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n) {
-    
-    int i = 0;
-    int j = m;
 
-    for (int k = m; k < m + n; k++)
-    {
-        nums1[k] = nums2[k-m];
-    }
+    int i = m - 1;
+    int j = n - 1;
+    int k = m + n - 1;
 
-    while (j < (m + n))
+
+    while(i >= 0 && j >= 0)
     {
         if (nums1[i] < nums2[j])
         {
-            i++;
-            j++;
+            nums1[k--] = nums2[j--];
         }
         else
         {
-            swap(&nums1[i], &nums2[j]);
-            i++;
-            j++;
+            nums1[k--] = nums1[i--];
         }
     }
 
+    while(j >= 0)
+    {
+        nums1[k--] = nums2[j--];
+    }
 }
