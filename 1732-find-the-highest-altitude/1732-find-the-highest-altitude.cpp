@@ -17,7 +17,7 @@ public:
             }
         }
 
-        return max;
+        return max > 0 ? max : 0;
 
     }
 };
