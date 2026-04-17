@@ -3,6 +3,7 @@ public:
     vector<int> corpFlightBookings(vector<vector<int>>& bookings, int n) {
         vector<int> ans (n + 1, 0);
 
+        ios_base::sync_with_stdio(false);
         int s = bookings.size();
 
         for (int i = 0; i < s; i++)
