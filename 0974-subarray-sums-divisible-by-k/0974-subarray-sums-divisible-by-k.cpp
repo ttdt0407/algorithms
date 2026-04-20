@@ -2,6 +2,8 @@ class Solution {
 public:
     int subarraysDivByK(vector<int>& nums, int k) {
         
+        ios_base::sync_with_stdio(false);
+        cin.tie(NULL);
         int res = 0;
         int n = nums.size();
         map<int, int> mp;
