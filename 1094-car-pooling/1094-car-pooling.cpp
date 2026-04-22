@@ -2,9 +2,9 @@ class Solution {
 public:
     bool carPooling(vector<vector<int>>& trips, int capacity) {
         int n  = trips.size();
-
+        int sum = 0;
+        
         vector<int> d(1005, 0);
-
         for (int i = 0; i < n; i++)
         {
             int l = trips[i][1];
@@ -14,9 +14,7 @@ public:
             d[l] += val;
             d[r] -= val;
         }
-    
-        vector<int> pre(1005, 0);
-        int sum = 0;
+
         for (int j = 0; j < d.size(); j++)
         {
             sum += d[j];
