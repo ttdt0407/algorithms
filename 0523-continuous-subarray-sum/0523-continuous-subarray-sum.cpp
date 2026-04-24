@@ -8,7 +8,7 @@ public:
         for (int i = 0; i < nums.size(); i++)
         {
             sum += nums[i];
-            int temp = sum % k;
+            int temp = ((sum % k) + k) % k;
             if (mp.count(temp))
             {
                 if (i - mp[temp] >= 2)
